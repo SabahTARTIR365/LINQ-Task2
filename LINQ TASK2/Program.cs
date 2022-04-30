@@ -11,13 +11,13 @@ namespace LINQTask1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello");
-            IEnumerable<string> words = new[] { "hello","hi","bee"};
+           
+            IEnumerable<string> words = new[] {"hello","hi","bee"};
            
             Console.WriteLine(FullExercise2.GetTheLastWord(words));
         }
     }
-    class FullExercise2
+    public class FullExercise2
     {
         // Given a sequence of words, get rid of any that don't have the character 'e' in them,
         // then sort the remaining words alphabetically, then return the following phrase using
@@ -29,13 +29,12 @@ namespace LINQTask1
         public static string GetTheLastWord(IEnumerable<string> words)
         {
 
-            string last = words.Where(name => name.Contains("e"))
+            return words.Where(name => name.Contains("e"))
              .OrderBy(name => name)
+             .Select(word => $"The last word is {word}")
              .LastOrDefault();
-            string s = $"The last word is {last}";
-            return last == null ? last : s;
 
-            //.Select(word=>$"The last word is {word}") ;
+
         }
     }
 }
