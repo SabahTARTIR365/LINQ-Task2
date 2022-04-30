@@ -11,8 +11,8 @@ namespace LINQTask1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hello");
-            IEnumerable<string> words = new[] { "hello","hi","bee"};
+           
+            IEnumerable<string> words = new[] {"hello","hi","bee"};
            
             Console.WriteLine(FullExercise2.GetTheLastWord(words));
         }
